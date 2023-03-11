@@ -1,5 +1,7 @@
 const palindromes = function (str) {
-    str = str.replace(/\s+/g, ''); //first, remove all the spaces from the string
+    str = str.replace(/\s+/g, ''); //first, remove all the spaces from the string.
+    str = str.replace(/\,/g, ''); //remove all commas.
+    str = str.toLowerCase(); //convert whole string to lower case.
     str = str.split(''); //then, split the string into an array.
     
     strArray = str;
