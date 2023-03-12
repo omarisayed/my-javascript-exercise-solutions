@@ -2,7 +2,7 @@ const add = function(...args) {
   return args.reduce(function(acc,curr){
     acc = acc + curr;
     return acc;
-  },0);
+  }); // no need for initializer. All the array methods like reduce, map, sort, and filter can be applied directly on the rest parameters.
 	
 };
 
@@ -10,21 +10,21 @@ const subtract = function(...args) {
 	return args.reduce(function(acc,curr){
     acc = acc - curr;
     return acc;
-  },0);
+  }); // no initiliazer. All the array methods like reduce, map, sort, and filter can be applied directly on the rest parameters.
 };
 
-const sum = function(...args) {
-	return args.reduce(function(acc,curr){
+const sum = function(sumArray) {
+	return sumArray.reduce(function(acc,curr){
     acc = acc + curr;
     return acc  
-  },0)
+  },0) // sum initializer set to 0.
 };
 
-const multiply = function(...args) {
-  return args.reduce(function(acc,curr){
+const multiply = function(multiArray) {
+  return multiArray.reduce(function(acc,curr){
     acc = acc * curr;
     return acc;
-  },0)
+  },1) // initializer for multiplication is 1. 0 would just multiply array by 0 and return 0.
 
 };
 
